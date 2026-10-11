@@ -1,5 +1,5 @@
 const configuredApiBase = import.meta.env.VITE_API_BASE_URL?.trim()
-const API_BASE = (configuredApiBase || '/api/v1').replace(/\/+$/, '')
+const API_BASE = (configuredApiBase || 'https://finiguard.onrender.com/api/v1').replace(/\/+$/, '')
 const REQUEST_TIMEOUT_MS = 10_000
 
 export class ApiError extends Error {
