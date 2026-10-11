@@ -1,0 +1,19 @@
+{
+  "name": "@bankism/backend",
+  "description": "FINIGUARD API for defensive analysis and simulated transaction guardrails",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=../.env --watch src/server.js",
+    "start": "node --env-file-if-exists=../.env src/server.js",
+    "test": "node --test",
+    "evaluate": "node src/evaluation/run-evaluation.js",
+    "ai:smoke": "node --env-file-if-exists=../.env scripts/ai-smoke.js",
+    "lint": "node --check src/server.js && node --check src/app.js && node --check src/routes/v1.js && node --check src/services/evaluate-request.js && node --check src/services/idempotency-store.js && node --check src/security/validate-request.js && node --check src/security/normalize-input.js && node --check src/security/detect-threats.js && node --check src/security/enforce-policy.js && node --check src/security/transaction-authorization.js && node --check src/banking/accounts.js && node --check src/banking/policy-config.js && node --check src/banking/money.js && node --check src/banking/simulated-bank.js && node --check src/audit/audit-store.js && node --check src/ai/analyzer.js && node --check src/ai/validate-analysis.js && node --check scripts/ai-smoke.js && node --check src/evaluation/run-evaluation.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
+

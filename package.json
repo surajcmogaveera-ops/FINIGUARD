@@ -1,0 +1,20 @@
+{
+  "name": "bankism",
+  "description": "FINIGUARD — AI Security Firewall for Financial Transactions",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace @bankism/frontend",
+    "dev:backend": "npm run dev --workspace @bankism/backend",
+    "build": "npm run build --workspace @bankism/frontend",
+    "lint": "npm run lint --workspace @bankism/backend",
+    "test": "npm run test --workspace @bankism/backend",
+    "evaluate": "npm run evaluate --workspace @bankism/backend",
+    "ai:smoke": "npm run ai:smoke --workspace @bankism/backend"
+  }
+}
+
